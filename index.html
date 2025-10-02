@@ -4,12 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="module">
-        import 'bootstrap/dist/css/bootstrap.min.css';
-        import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-    </script>
-
+    <title>Notaciones</title>
+    <link rel="stylesheet" href="./public/css/b5/bootstrap.css">
+    <link rel="stylesheet" href="./public/css/font_awesome/all.css">
+    <link rel="stylesheet" href="./public/css/main.css">
 </head>
 
 <body>
@@ -17,16 +15,32 @@
     <div class="container mt-4">
         <div class="row mb-3 justify-content-center">
             <div class="card justify-content-center" style="width: 25rem; background-color: rgba(255, 255, 255, 0.5);">
-               <!--  <img class="mx-auto d-block" src="./public/img/Itadori.png" height="95" width="125px"> -->
+                <h1 class="fw-bold text-center">Notaciones</h1>
                 <div class="card-body row justify-content-center">
 
-                    </div>
+
+                    <label class="fw-bold" for="operacion">Ingresa una Operacion</label>
+                    <input name="operacion" id="operacion" class="form-control mb-3" type="text" placeholder="Ejemplo: A+B o (A+B)*C">
+                    <button id="calcular" class="btn btn-primary mb-3">Calcular</button>
+
+                    <label class="col mt-2" text-center for="expresion" id="preorden">Notación Infija</label>
+                    <div id="contenido_infija" class="justify-content-around border border-primary"></div>
+
+                    <label class="col mt-2" text-center  for="expresion" id="postorden">Notación Prefija</label>
+                    <div id="contenido_prefija" class="justify-content-around border border-primary"></div>
+
+                    <label class="col mt-2" text-center for="expresion" id="inorden">Notación Postfija</label>
+                    <div id="contenido_postfija" class="justify-content-around border border-primary"></div>
+
+                    <label class="col mt-2"  text-center for="expresion" id="inorden">Resultado</label>
+                    <div id="contenido_resultado" class="justify-content-around border border-primary"></div>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="./dist/bundle.js"></script>
+    <script src="./bundle.js"></script>
 </body>
 
 </html>
